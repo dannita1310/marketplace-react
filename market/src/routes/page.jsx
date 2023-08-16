@@ -1,19 +1,26 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
-import Inicio from "../pages/inicio/index";
+
+import Inicio from "../pages/inicio";
 import { ProductoItems } from "../pages/productos";
 import { ProductosDetalles } from "../pages/productoDetalles";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 function Page() {
   return (
-    <div>
+    <section>
       <Routes>
-        <Route path="/" exact component={Inicio} />
-        <Route path="/productos" exact component={ProductoItems} />
-        <Route path="/producto/:id" exact component={ProductosDetalles} />
-      </Routes>
-    </div>
+      <Route path="/" element={<Inicio />}>
+        <Route path="/productos" element={<ProductoItems />}>
+
+        </Route>
+        <Route path="/producto/:id" element={<ProductosDetalles />} />
+      </Route>
+
+      <Route path="*" element={<Navigate to="/" />} />
+    </Routes>
+    </section>
   );
 }
 
 export default Page;
+

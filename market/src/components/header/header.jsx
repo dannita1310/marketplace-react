@@ -1,11 +1,11 @@
 import "./styles.css";
 import React, { useContext } from "react";
-import { DataContext } from "../../context/DataProvider";
+import data from "../../Data/data";
 import { Link } from "react-router-dom";
 import principal from "../../images/principal.jpg";
 
 export const Header = () => {
-  const value = useContext(DataContext);
+  const value = useContext(data);
   const [carrito] = value.carrito;
   const [menu, setMenu] = value.menu;
 
@@ -20,7 +20,7 @@ export const Header = () => {
       </div>
       <Link to="/">
         <div className="logo">
-          <img src={principal} alt="Nike" width="150" />
+          <img src={principal} alt="Imagen no disponible" width="150" />
         </div>
       </Link>
       <ul>

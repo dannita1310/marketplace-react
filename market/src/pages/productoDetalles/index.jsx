@@ -2,7 +2,7 @@ import "./styles.css";
 import React, { useContext, useEffect, useState } from "react";
 import { DataContext } from "../../context/DataProvider";
 import { useParams } from "react-router-dom";
-import { ProductoItem } from "../../components/productoItems/index";
+import { ProductoItem } from "../../components/productoItems";
 
 export const ProductosDetalles = () => {
   const value = useContext(DataContext);

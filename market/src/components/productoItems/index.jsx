@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { DataContext } from "../../context/DataProvider";
+import data from "../../Data/data";
 
 export const ProductoItem = ({ title, image, category, price, id }) => {
-  const value = useContext(DataContext);
+  const value = (data);
   const addCarrito = value.addCarrito;
 
   return (

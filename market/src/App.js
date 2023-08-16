@@ -3,20 +3,19 @@ import React from "react";
 import { Header } from "./components/header/header";
 import { Carrito } from "./components/Shopping cart/carrito";
 import { DataProvider } from "./context/DataProvider";
-import { BrowserRouter, BrowserRouter as Router } from "react-router-dom";
-import Pages from "./routes/page";
-// import "boxicons";
+import { BrowserRouter } from "react-router-dom";
+import Page from "./routes/Page";
 
 function App() {
   return (
     <DataProvider>
       <div className="App">
         <BrowserRouter>
-          <Pages>
-            {/* <Header />
+          <Page>
+            <Header />
             <Carrito />
-            <Pages /> */}
-          </Pages>
+            <Page />
+          </Page>
         </BrowserRouter>
       </div>
     </DataProvider>
