@@ -55,7 +55,7 @@ export const ProductosDetalles = () => {
                 <option value="1">7</option>
                 <option value="1">8</option>
               </select>
-              <p>Cantidad</p>
+              <p>Tamaño</p>
             </div>
           </div>
           <button onClick={() => addCarrito(detalle.id)}>
@@ -77,11 +77,20 @@ export const ProductosDetalles = () => {
           />
           <div className="description">
             <p>
-              <b>description: </b> Productos de calidad al mejor precio del
-              mercado!
+              <b>description: </b> Lorem ipsum dolor, sit amet consectetur
+              adipisicing elit. Cum necessitatibus soluta alias porro, saepe
+              facere expedita asperiores quos fugit inventore ex, itaque
+              sapiente quae pariatur beatae optio repellat aperiam quia possimus
+              mollitia repellendus? Illo natus quam eaque impedit omnis
+              pariatur!
             </p>
             <br />
-            <p>Productos de calidad al mejor precio del mercado!</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+              vitae accusantium omnis, facere laudantium ipsa hic reprehenderit
+              blanditiis quibusdam quos repellendus id illo reiciendis magni,
+              aliquid beatae, consequatur sapiente! Sequi facere itaque,
+            </p>
           </div>
         </div>
       }

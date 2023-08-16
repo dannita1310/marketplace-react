@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { DataContext } from "../../context/DataProvider";
 
-const ProductoItem = ({ title, image, category, price, id }) => {
+const ProductoItem = ({ title, image, category, type, price, id }) => {
   const value = useContext(DataContext);
   const addCarrito = value.addCarrito;
 
@@ -16,6 +16,7 @@ const ProductoItem = ({ title, image, category, price, id }) => {
       <div className="producto__footer">
         <h1>{title}</h1>
         <p>{category}</p>
+        <p>{type}</p>
         <p className="price">${price} </p>
       </div>
       <div className="bottom">

@@ -18,6 +18,7 @@ export const Inicio = () => {
             title={producto.title}
             image={producto.image}
             category={producto.category}
+            type={producto.Type}
             price={producto.price}
             id={producto.id}
           />
