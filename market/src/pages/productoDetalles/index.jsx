@@ -2,7 +2,7 @@ import "./styles.css";
 import React, { useContext, useEffect, useState } from "react";
 import { DataContext } from "../../context/DataProvider";
 import { useParams } from "react-router-dom";
-import { ProductoItem } from "../../components/productoItems";
+import ProductoItem from "../../components/productoItems";
 
 export const ProductosDetalles = () => {
   const value = useContext(DataContext);
@@ -55,7 +55,7 @@ export const ProductosDetalles = () => {
                 <option value="1">7</option>
                 <option value="1">8</option>
               </select>
-              <p>Tamaño</p>
+              <p>Cantidad</p>
             </div>
           </div>
           <button onClick={() => addCarrito(detalle.id)}>

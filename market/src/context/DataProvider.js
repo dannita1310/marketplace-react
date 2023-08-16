@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 import Data from "../Data/data";
+import Swal from "sweetalert2";
 
 export const DataContext = createContext();
 
@@ -28,7 +29,11 @@ export const DataProvider = (props) => {
       });
       setCarrito([...carrito, ...data]);
     } else {
-      alert("El producto se ha añadido al carrito");
+      Swal.fire({
+        icon: "success",
+        title: "Sin problemas",
+        text: "Articulo agregado con éxito!",
+      });
     }
   };
   useEffect(() => {

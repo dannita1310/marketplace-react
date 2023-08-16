@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import data from "../../Data/data";
+import { DataContext } from "../../context/DataProvider";
 
-export const ProductoItem = ({ title, image, category, price, id }) => {
-  const value = (data);
+const ProductoItem = ({ title, image, category, price, id }) => {
+  const value = useContext(DataContext);
   const addCarrito = value.addCarrito;
 
   return (
@@ -31,3 +31,5 @@ export const ProductoItem = ({ title, image, category, price, id }) => {
     </div>
   );
 };
+
+export default ProductoItem;

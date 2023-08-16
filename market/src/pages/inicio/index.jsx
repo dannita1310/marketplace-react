@@ -1,20 +1,28 @@
 import "./styles.css";
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { DataContext } from "../../context/DataProvider";
+import ProductoItem from "../../components/productoItems";
+import data from "../../Data/data";
 
-function Inicio() {
+export const Inicio = () => {
+  const value = useContext(DataContext);
+  const [...productos] = value.productos;
+
   return (
-    
-    <div className="inicio">
-      <Link to="/">
-        <h1>home</h1>
-      </Link>
-      <Link to="/productos">
-        
-        <h1>Productos</h1>
-      </Link>
-    </div>
+    <>
+      <h1 className="produ">PRODUCTOS</h1>
+      <div className="productos">
+        {data.items.map((producto) => (
+          <ProductoItem
+            key={producto.id}
+            title={producto.title}
+            image={producto.image}
+            category={producto.category}
+            price={producto.price}
+            id={producto.id}
+          />
+        ))}
+      </div>
+    </>
   );
-}
-
-export default Inicio;
+};
