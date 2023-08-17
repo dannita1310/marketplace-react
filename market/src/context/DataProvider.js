@@ -5,19 +5,19 @@ import Swal from "sweetalert2";
 export const DataContext = createContext();
 
 export const DataProvider = (props) => {
-  const [productos, setProductos] = useState([]);
+  const [productos, setProductos] = useState(Data.items);
   const [menu, setMenu] = useState(false);
   const [carrito, setCarrito] = useState([]);
   const [total, setTotal] = useState(0);
 
-  useEffect(() => {
-    const producto = Data.items;
-    if (producto) {
-      setProductos(producto);
-    } else {
-      setProductos([]);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const producto = Data.items;
+  //   if (producto) {
+  //     setProductos(producto);
+  //   } else {
+  //     setProductos([]);
+  //   }
+  // }, []);
 
   const addCarrito = (id) => {
     const check = carrito.every((item) => {
@@ -47,13 +47,14 @@ export const DataProvider = (props) => {
     localStorage.setItem("dataCarrito", JSON.stringify(carrito));
   }, [carrito]);
 
+  const getTotal = () => {
+    const res = carrito.reduce((prev, item) => {
+      return prev + item.price * item.cantidad;
+    }, 0);
+    setTotal(res);
+  };
+
   useEffect(() => {
-    const getTotal = () => {
-      const res = carrito.reduce((prev, item) => {
-        return prev + item.price * item.cantidad;
-      }, 0);
-      setTotal(res);
-    };
     getTotal();
   }, [carrito]);
 

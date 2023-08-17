@@ -13,6 +13,7 @@ const ProductoItem = ({ title, image, category, type, price, id }) => {
           <img src={image} alt={title} />
         </div>
       </Link>
+      <div>
       <div className="producto__footer">
         <h1>{title}</h1>
         <p>{category}</p>
@@ -28,6 +29,7 @@ const ProductoItem = ({ title, image, category, type, price, id }) => {
             Vista
           </Link>
         </div>
+      </div>
       </div>
     </div>
   );

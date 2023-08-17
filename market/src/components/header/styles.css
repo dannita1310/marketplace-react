@@ -1,5 +1,5 @@
 header {
-  width: 97%;
+  width: 100%;
   min-height: 100px;
   max-width: 1530px;
   overflow: hidden;
@@ -7,10 +7,10 @@ header {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  position: fixed;
+  position: relative;
   box-sizing: border-box;
   background-color: white;
-  box-shadow: 0 10px 10px #08a05c50;
+  box-shadow: 0 10px 10px rgba(238, 174, 202, 1);
 }
 a {
   color: black;
@@ -18,7 +18,7 @@ a {
   text-transform: uppercase;
 }
 a:hover {
-  color: #08a05c;
+  color: rgba(148, 187, 233, 1);
 }
 .menu {
   display: none;
