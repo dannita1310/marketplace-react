@@ -36,7 +36,7 @@ const data = {
     },
     {
       id: 4,
-      title: "Saxofón Alto YAMAHA color negro",
+      title: "Saxofón Alto YAMAHA color bronce",
       price: 1300,
       image: require("../images/img04.jpg"),
       category: "saxophone",
@@ -81,7 +81,7 @@ const data = {
     {
       id: 8,
       title: "CLARINETTE MIB",
-      price: 335,
+      price: 1340,
       image: require("../images/img08.jpg"),
       category: "CLARINETTE",
       Type: "Professional",
