@@ -46,17 +46,12 @@ const ProductosDetalles = () => {
         ) : (
           <img src={detalle.image} alt={detalle.title} />
         )}
-        <input
-          type="range"
-          min="1"
-          max="36"
-          step="1"
-          value={url}
-          onChange={handleInput}
-        />
         <div className="description">
           <p>
-            <b>description: </b>
+            <b>
+              description: Los mejores instrumentos del mercado, con los mejores
+              precios!
+            </b>
           </p>
           <br />
           <p></p>
