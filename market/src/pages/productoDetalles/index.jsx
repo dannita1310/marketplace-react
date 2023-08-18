@@ -40,14 +40,7 @@ const ProductosDetalles = () => {
     <>
       <div className="detalles">
         <h2>{detalle.title}</h2>
-        <p className="price">${detalle.price}</p>
-        <div className="grid">
-          <p className="nuevo">Nuevo</p>
-        </div>
-        <button onClick={() => addCarrito(detalle.id)}>
-          Añadir al carrito
-        </button>
-
+        <p className="price">PRICE: ${detalle.price}</p>
         {url ? (
           <img src={images} alt={detalle.title} />
         ) : (
@@ -67,6 +60,12 @@ const ProductosDetalles = () => {
           </p>
           <br />
           <p></p>
+        </div>
+        <div className="grid">
+          <p className="nuevo">Nuevo</p>
+          <button onClick={() => addCarrito(detalle.id)}>
+            Añadir al carrito
+          </button>
         </div>
       </div>
 

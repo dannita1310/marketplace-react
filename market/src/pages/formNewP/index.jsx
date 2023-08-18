@@ -1,32 +1,57 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import styles from "./styles.css";
+import data from "../../Data/data";
 
 function FormNewP() {
-  const [productName, setProductName] = useState("");
-  const [productPrice, setProductPrice] = useState("");
-  const [productImage, setProductImage] = useState(null);
+  const [productData, setProductData] = useState({
+    id: data.items.length,
+    title: "",
+    price: "",
+    image: "",
+    category: "",
+  });
 
-  const handleNameChange = (event) => {
-    setProductName(event.target.value);
-  };
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
 
-  const handlePriceChange = (event) => {
-    setProductPrice(event.target.value);
+    if (name === "productName") {
+      setProductData((prevData) => ({
+        ...prevData,
+        title: value,
+      }));
+    } else if (name === "productPrice") {
+      setProductData((prevData) => ({
+        ...prevData,
+        price: value,
+      }));
+    } else if (name === "productImage") {
+      const selectedImage = value;
+
+      setProductData((prevData) => ({
+        ...prevData,
+
+        image: selectedImage,
+      }));
+    } else if (name === "productCategory") {
+      setProductData((prevData) => ({
+        ...prevData,
+        category: value,
+      }));
+    }
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    Swal.fire({
-      icon: "success",
-      title: "Sin problemas",
-      text: "Articulo agregado con éxito!",
-    });
-  };
-
-  const handleImageChange = (event) => {
-    const selectedImage = event.target.files[0];
-    setProductImage(selectedImage);
+    if (!data.items.some((item) => item.id === productData.id)) {
+      data.items.push(productData);
+      console.log(data.items);
+      Swal.fire({
+        icon: "success",
+        title: "Sin problemas",
+        text: "Articulo agregado con éxito!",
+      });
+    }
   };
 
   return (
@@ -37,29 +62,40 @@ function FormNewP() {
           <div className="input">
             <input
               type="text"
-              value={productName}
-              onChange={handleNameChange}
+              name="productName"
+              value={productData.productName}
+              onChange={handleInputChange}
             />
             <label>Nombre del Producto</label>
           </div>
           <div className="input">
             <input
               type="number"
-              value={productPrice}
-              onChange={handlePriceChange}
+              name="productPrice"
+              value={productData.productPrice}
+              onChange={handleInputChange}
             />
             <label>Precio del Producto</label>
           </div>
           <div className="input">
             <input
-              type="file"
-              value={productImage}
+              type="text"
+              name="productImage"
               accept="image/*"
-              onChange={handleImageChange}
+              onChange={handleInputChange}
             />
             <label>Foto del Producto</label>
           </div>
-          <button title="Add" class="cssbuttons-io-button">
+          <div className="input">
+            <input
+              type="text"
+              name="productCategory"
+              value={productData.category}
+              onChange={handleInputChange}
+            />
+            <label>Categoría del Producto</label>
+          </div>
+          <button title="Add" className="cssbuttons-io-button">
             <svg
               height="25"
               width="25"

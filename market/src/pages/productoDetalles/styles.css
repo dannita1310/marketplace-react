@@ -15,10 +15,8 @@ body {
   box-sizing: border-box;
 }
 .detalles h2 {
+  margin-top: -10%;
   font-size: 3.5rem;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
   font-family: Helvetica, sans-serif;
   color: #1a202c;
 }
@@ -57,18 +55,7 @@ body {
 .detalles .grid .nuevo {
   background-color: rgba(148, 187, 233, 1);
 }
-.detalles .grid .tamano {
-  background-color: #f1365b;
-  display: flex;
-}
-.detalles .grid .tamano select {
-  border: none;
-  outline: 0;
-  font-size: 2rem;
-  background-color: #f1365b;
-  color: white;
-  cursor: pointer;
-}
+
 .detalles img {
   min-height: 300px;
   object-fit: contain;

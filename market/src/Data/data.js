@@ -2,7 +2,7 @@ const data = {
   status: "success",
   items: [
     {
-      id: 1,
+      id: 0,
       title: "Saxofón Alto HOLMER",
       price: 800,
       image: require("../images/img01.jpg"),
@@ -13,7 +13,7 @@ const data = {
       cantidad: 1,
     },
     {
-      id: 2,
+      id: 1,
       title: "Saxofón Alto HOLMER color plata",
       price: 950,
       image: require("../images/img02.jpg"),
@@ -24,7 +24,7 @@ const data = {
       cantidad: 1,
     },
     {
-      id: 3,
+      id: 2,
       title: "Saxofón Baritono HOLMER",
       price: 2500,
       image: require("../images/img03.jpg"),
@@ -35,7 +35,7 @@ const data = {
       cantidad: 1,
     },
     {
-      id: 4,
+      id: 3,
       title: "Saxofón Alto YAMAHA color bronce",
       price: 1300,
       image: require("../images/img04.jpg"),
@@ -46,7 +46,7 @@ const data = {
       cantidad: 1,
     },
     {
-      id: 5,
+      id: 4,
       title: "Saxofón alto SELMER PARIS",
       price: 2700,
       image: require("../images/img05.jpg"),
@@ -57,7 +57,7 @@ const data = {
       cantidad: 1,
     },
     {
-      id: 6,
+      id: 5,
       title: "Clarinete ROY BENSON",
       price: 413,
       image: require("../images/img06.jpg"),
@@ -68,7 +68,7 @@ const data = {
       cantidad: 1,
     },
     {
-      id: 7,
+      id: 6,
       title: "Clarinete YAMAHA STANDARD",
       price: 825,
       image: require("../images/img07.jpg"),
@@ -79,7 +79,7 @@ const data = {
       cantidad: 1,
     },
     {
-      id: 8,
+      id: 7,
       title: "CLARINETTE MIB",
       price: 1340,
       image: require("../images/img08.jpg"),
@@ -90,7 +90,7 @@ const data = {
       cantidad: 1,
     },
     {
-      id: 9,
+      id: 8,
       title: "Flauta traversa YAMAHA",
       price: 1020,
       image: require("../images/img09.jpg"),
@@ -101,7 +101,7 @@ const data = {
       cantidad: 1,
     },
     {
-      id: 10,
+      id: 9,
       title: "Flauta traversa PEARL 505E-1R",
       price: 1300,
       image: require("../images/img10.jpg"),
@@ -112,7 +112,7 @@ const data = {
       cantidad: 1,
     },
     {
-      id: 11,
+      id: 10,
       title: "Oboe SELMER",
       price: 1500,
       image: require("../images/img11.jpg"),
@@ -123,7 +123,7 @@ const data = {
       cantidad: 1,
     },
     {
-      id: 12,
+      id: 11,
       title: "Oboe YAMAHA",
       price: 1700,
       image: require("../images/img14.jpg"),
